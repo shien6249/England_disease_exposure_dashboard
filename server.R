@@ -11,17 +11,8 @@ library(leafsync) # for sync the maps
 
 
 # get shapefile data
-#qof_shp <- readOGR(dsn = "data/link", "qof_shp")
 full_shp <- readOGR(dsn = "data/fulllink", "full_shp_new_5")
 names(full_shp@data)
-
-View(full_shp)
-
-#imd_shp <- readOGR(dsn = "data/link", "imd_shp1_new")
-#air_shp <- readOGR(dsn = "data/link", "air_shp_new")
-#air_shp <- readOGR(dsn = "data/linkedair", "air_shp_new_4")
-#air_shp <- readOGR(dsn = "data/link", "air_shp")
-View(full_shp@data)
 air <- full_shp[1:17]
 
 df <- read.csv("data/twodataccg.csv")
