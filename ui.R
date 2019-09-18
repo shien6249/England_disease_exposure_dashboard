@@ -6,8 +6,6 @@ library("shinydashboard")
 
 
 header<-dashboardHeader(title="QOF Map from 2012/13 to 2017/18", titleWidth = 1000)
-#pols <- c("None", sort(unique(as.vector(full_shp$PlltntT)), decreasing=FALSE))
-#diseasesel <- c("None", levels(full_shp$Disease))
 yearse <- unique(df$Year)
 yer <- sort(unique(as.character(full_shp$Year),decreasing=TRUE))
 
@@ -111,7 +109,6 @@ body<-
 
 
 ui<-
-  #fluidPage(theme = shinytheme("cosmo"),
   dashboardPage(#skin = "black",
     header,
     dashboardSidebar(disable = TRUE),
